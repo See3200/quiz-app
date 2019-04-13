@@ -8,6 +8,7 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .button:focus {
@@ -19,7 +20,10 @@
 
 }
 
-.button:disabled {
+.button:disabled,
+.button.error:disabled,
+.button.success:disabled,
+.button.primary:disabled {
     background-color: #ccc;
     color: #000;
     cursor: not-allowed;

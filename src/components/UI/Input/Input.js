@@ -19,7 +19,7 @@ const Input = props => {
         <div className={cls.join(' ')}>
             <label htmlFor={htmlFor}>{props.label}</label>
             <input type={inputType} id={htmlFor} value={props.value} onChange={props.onChange}/>
-            {isInvalid ? <span>{props.errorMessage || "Put the valid value"}</span> : null}
+            {isInvalid(props) ? <span>{props.errorMessage || "Put the valid value"}</span> : null}
         </div>
     )
 }
